@@ -1,0 +1,25 @@
+﻿@page "/testhid"
+@inherits TestHIDComponent
+@inject IJSRuntime _jsRuntime
+
+<div class="d-flex justify-content-center">
+    <button id ="request" > Request Device</button>    
+    <button id ="devices" disabled="disabled"> Get HID Devices</button>
+</div>
+<div class="d-flex justify-content-center">
+    <p id="input">Connect device and press button. Inputs are logged to the client and server.</p>
+</div>
+ 
+  
+@code
+{
+    /// <summary>
+    /// Adds an event listerns after component is fully rendered (in hid.js)
+    /// </summary>
+    /// <param name="firstRender"></param>
+    protected override void OnAfterRender(bool firstRender)
+    {
+        // Add event listeners
+        _jsRuntime.InvokeVoidAsync("attachHandlers");
+    }
+}
