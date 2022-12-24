@@ -2,6 +2,17 @@
 @inherits TestHIDComponent
 @inject IJSRuntime _jsRuntime
 
+<h2 class="d-flex justify-content-center">Test HID USB Connection</h2>
+<div class="d-flex justify-content-center">    
+    <form>
+        <label for="vendor">Vender ID: </label>
+        <input type="text" name="vendor" id="vendor">
+        <br/>
+        <label for="product">Product ID: </label>
+        <input type="text" name="product" id="product">
+    </form>
+    
+</div>
 <div class="d-flex justify-content-center">
     <button id ="request" > Request Device</button>    
     <button id ="devices" disabled="disabled"> Get HID Devices</button>
