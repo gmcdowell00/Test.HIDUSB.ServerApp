@@ -4,6 +4,15 @@
     margin-right : 4px;
 }
 
+input#vendor {
+    margin-bottom : 2px;
+    margin-left : 4.4px;
+}
+
+input#product {
+    margin-bottom :2px;
+}
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

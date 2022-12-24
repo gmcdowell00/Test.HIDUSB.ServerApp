@@ -19,7 +19,8 @@ namespace Test.HIDUSB.ServerApp.Pages
         public static void ReceivedInput(int i)
         {
             // Print input
-            System.Diagnostics.Debug.Print($"Foot Pedal Input: {(FootPedal)i}");
+            System.Diagnostics.Debug.Print($" Foot Pedal Input: {(FootPedal)i}");
+
         }
     }
 }
