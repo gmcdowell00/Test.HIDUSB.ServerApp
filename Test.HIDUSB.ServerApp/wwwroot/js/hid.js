@@ -25,6 +25,8 @@ function handleInputReport(e) {
     //console.log(e.device.productName + ": got input report " + e.reportId);
     console.log(new Uint8Array(e.data.buffer));
     let input = new Uint8Array(e.data.buffer);
+
+    // If not KeyUp command log to server. Can change letter. 
     if (input[0] != 0) {
 
         // Display on Client
@@ -89,8 +91,6 @@ async function requestDevice () {
             // If device is already open
             if (device.opened) {
                 console.log(device.productName + " Already opened")
-                // Attach report
-                device.addEventListener("inputreport", handleInputReport);
                 return;
             }            
 
