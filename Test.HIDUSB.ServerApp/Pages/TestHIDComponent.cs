@@ -16,10 +16,10 @@ namespace Test.HIDUSB.ServerApp.Pages
         /// </summary>
         /// <param name="i"></param>
         [JSInvokable]
-        public static void ReceivedInput(int i)
+        public static void ReceivedInput(int input)
         {
             // Print input
-            System.Diagnostics.Debug.Print($" Foot Pedal Input: {(FootPedal)i}");
+            System.Diagnostics.Debug.Print($" Foot Pedal Input: {(FootPedal)input}");
 
         }
     }
